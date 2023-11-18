@@ -3,6 +3,7 @@ package com.andre.springrediscache.services;
 import com.andre.springrediscache.domain.Produto;
 import com.andre.springrediscache.domain.ProdutoDTO;
 import com.andre.springrediscache.repositories.ProdutoRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class ProdutoService {
         this.repository = repository;
     }
 
+    @Cacheable("produtos")
     public List<ProdutoDTO> findAll() {
         List<ProdutoDTO> listAll = this.repository.findAll().stream().map(ProdutoDTO::new).toList();
         return listAll;
