@@ -31,3 +31,8 @@ Nesta aplicação, o *cache* foi utilizado no método **findAll()** de acesso ao
 ## Execução do projeto em uma IDE
 
 Para este projeto foi escolhido o banco de dados **MySQL**. O host e a senha devem ser definidos por variáveis de ambiente na IDE (${MYSQL_HOST) e ${MYSQL_PWD}). Como informado no application.properties, o banco de dados deverá possuir o *schema* **rediscache**.
+
+
+## Acesso aos **endpoints**
+
+Estão disponíveis os métodos GET (listagem de produtos cadastrados) e POST (cadastro de um novo produto) em /produto. A aplicação possui ativo o **Swagger** (disponível em [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)) para facilitar os acesos.
